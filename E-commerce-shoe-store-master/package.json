@@ -1,0 +1,24 @@
+{
+  "name": "creative-code-lap-2",
+  "version": "1.0.0",
+  "description": " This is Abdelrahman fares repository for the Creative Code Lap2 final project (Online web-shop)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.nwt.fhstp.ac.at/cc201013/creative-code-lap-2.git"
+  },
+  "author": "Abdelrahman fares",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "mysql2": "^2.2.5"
+  }
+}

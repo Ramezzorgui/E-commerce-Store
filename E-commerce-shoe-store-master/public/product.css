@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #40c9a2;
+    --gray: #ededed;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--alice-blue);
+}
+
+/*Header section*/
+nav {
+    display: flex;
+    flex-direction: row;
+    background: #ffffff;
+    height: 70px;
+    width: 100%;
+    color: black !important;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+}
+
+.logo-container {
+    width: 20%;
+}
+
+h2.logo {
+    color: black !important;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.main-nav {
+    width: 55%;
+    list-style-type: none;
+    text-align: center;
+    padding: 0.5125rem;
+    text-transform: uppercase;
+}
+
+.main-nav ul {
+    width: 100%;
+    list-style: none;
+    padding-left: 100px;
+}
+
+.hover-underline-animation {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-right: 2.3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.30s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.main-nav .hover-underline-animation a {
+    display: inline-block;
+    padding: 20px 10px 20px;
+    color: #000000;
+    font-weight: initial;
+    text-decoration: none;
+}
+
+.sale {
+    color: red !important;
+}
+
+/*SEARCH BAR*/
+#icons {
+    width: 25%;
+    list-style-type: none;
+    padding: 0.5125rem;
+}
+
+#icons ul {
+    position: absolute;
+    right: 40px;
+    margin-top: 0.8rem;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    width: 45px;
+}
+
+.cart img {
+}
+
+.counter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 0.5rem;
+    border-radius: 50px;
+    right: 0;
+}
+/*SEARCH BAR END*/
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+#icons input {
+    outline: none;
+    margin-right: 5px;
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 5px 8px 5px 32px;
+    width: 50px;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+#icons input:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: var(--carribean-green);
+    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+}
+#icons input:-moz-placeholder {
+    color: #999;
+}
+#icons input ::-webkit-input-placeholder {
+    color: #999;
+}
+#icons img {
+    width: 35px;
+    height: 35px;
+}
+#icons img:hover {
+    cursor: pointer;
+}
+.checkbtn {
+    font-size: 2.5rem;
+    color: black !important;
+    cursor: pointer;
+    display: none;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+#check {
+    display: none;
+}
+
+/* End of header */
+
+/*current page*/
+.current-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1.3rem;
+}
+.categories {
+    font-weight: normal;
+    font-size: 1rem;
+    width: 250px;
+}
+.men-shoes {
+    font-weight: 600;
+    font-size: 1.4rem;
+    width: 250px;
+    margin-top: 0.5rem;
+}
+
+
+/*Start of products --card*/
+.card {
+    margin-top: 30px;
+}
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.product-imgs {
+    display: flex;
+    flex-direction: column;
+}
+.img-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.5s ease;
+    background: #EDEDED;
+    height: 500px;
+}
+.img-showcase img {
+    width: 60%;
+    height: 320px;
+}
+.img-select {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.1rem;
+}
+.img-item {
+    border: 1px solid #878585;
+    box-sizing: border-box;
+    margin: 0.3rem;
+    opacity: 0.4;
+}
+.img-item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.product-content {
+    padding: 2rem 1rem;
+    color: #000000;
+}
+.product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000000;
+    position: relative;
+    margin: 1rem 0;
+    margin-bottom: 0.4rem;
+    width: 200px;
+}
+.product-model {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    padding: 0 0.3rem;
+    padding-left: 0;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.product-rating {
+    color: #ffc107;
+}
+.product-rating span {
+    font-weight: 600;
+    color: var(--carribean-green);
+}
+.product-price {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span {
+    font-weight: 400;
+}
+.last-price span {
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price {
+    margin-top: 0.3rem;
+}
+.new-price span {
+    color: #000000;
+    margin-top: 0.6rem;
+}
+.product-detail {
+    border-top: 3px solid #E3E3E3;
+}
+.about-item h2 {
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 0.6rem;
+}
+.select-options {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    margin-top: 0.7rem;
+    margin-left: 0.3rem;
+}
+
+/*SELECT-OPTIONS*/
+.custom-select {
+    outline: none;
+    width: 250px;
+    padding: 0.4rem;
+    border: 1px solid #A6A6A6;
+    color: #5a5a5a;
+    border-radius: 2px solid black;
+    margin-top: 0.2rem;
+}
+.product-detail ul li {
+    list-style: none;
+    background-size: 18px;
+    margin: 0.4rem 0;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.select-options label {
+    display: block;
+}
+.select-option-2 {
+    margin-left: 0.3rem;
+}
+.select-option-2 label {
+    display: block;
+}
+.product-detail ul li span {
+    font-weight: 400;
+}
+.purchase-info {
+    margin: 0.9rem 0;
+    margin-left: 0.3rem;
+}
+.purchase-info input,
+.purchase-info .btn {
+    border: 1.5px solid #ddd;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-bottom: 1rem;
+}
+.purchase-info input {
+    display: block;
+    width: 60px;
+    padding: 0.45rem 0.8rem;
+    margin-top: 0.2rem;
+    margin-left: 0;
+}
+.purchase-info label {
+    font-weight: 600;
+}
+.purchase-info .btn {
+    cursor: pointer;
+    color: #fff;
+    margin-top: 1rem;
+}
+.purchase-info .btn:first-of-type {
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type {
+    background: black;
+}
+.purchase-info .btn:hover {
+    background: #40C9A2FF;
+}
+/*FOOTER*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #161616;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    color: white;
+    padding-top: 35px;
+    margin-top: 10%;
+    margin-bottom: 0px;
+}
+
+.footer_section_1 {
+    display: grid;
+    grid-template-columns: repeat(4, 22% 22% 22% 34%);
+}
+.col-1 h3,
+.col-2 h3,
+.col-3 h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    margin-left: 15%;
+    width: 40% !important;
+}
+.col-1 h3:after,
+.col-2 h3:after,
+.col-3 h3:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 10px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid #7F7E7F; /* This creates the border. Replace black with whatever color you want. */
+}
+.col-1 h3 {
+    margin-left: 20%;
+}
+.col-2 h3 {
+    margin-left: 20%;
+}
+.col-4 h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+.col-4 p {
+    font-size: 1.2rem;
+    color: #767780;
+    margin-left: 10%;
+    margin-bottom: 1.4rem;
+}
+.newsletter {
+    display: flex;
+    padding: 0.5rem;
+    padding-left: 0;
+    width: 100%;
+}
+.col-4 .email {
+    display: inline;
+    outline: none;
+    background: none;
+    width: 60%;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid #7F7E7F;
+    height: 40px;
+    margin-right: 0;
+    margin-left: 10%;
+    padding-left: 0.5rem;
+}
+.SUBSCRIBE {
+    outline: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    background: #7F7E7F;
+    padding: 0.5rem;
+    height: 40px;
+    margin-top: 0;
+    margin-left: 0;
+}
+.SUBSCRIBE:hover {
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    margin-right: 1rem;
+    background: #202020;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover {
+    background: #3FC9A2;
+    border-color: transparent;
+}
+.col-1 ul,
+.col-2 ul,
+.col-3 ul,
+.col-4 ul {
+    color: #767780;
+    font-size: 1.2rem;
+    list-style: none;
+    margin-top: 25px;
+}
+.col-1 ul li,
+.col-2 ul li,
+.col-3 ul li,
+.col-4 ul li {
+    color: #767780;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    margin-left: 15%;
+}
+.col-1 ul li:hover,
+.col-2 ul li:hover,
+.col-3 ul li:hover,
+.col-4 ul li:hover {
+    color: #3FC9A2;
+    cursor: pointer;
+}
+.col-1 ul li {
+    margin-left: 20%;
+}
+.col-2 ul li {
+    margin-left: 20%;
+}
+.footer_section_2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: white;
+    background: #161616;
+    border-top: 2px solid #232326;
+    margin-top: 50px;
+    padding-top: 15px;
+}
+.copy-right {
+    width: 60%;
+    justify-content: space-between;
+}
+.copy-right p {
+    color: #7B7B7B;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 8%;
+    font-size: 1.1rem;
+    padding-top: 8px;
+}
+.payment-icon {
+    width: 60%;
+}
+.payment-icon div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 40px;
+    width: 60%;
+}
+.payment-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper {
+        display: flex;
+    }
+    .product-imgs {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-content {
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .card-wrapper {
+        width: 90%;
+    }
+
+    .current-page {
+        width: 90%;
+    }
+    .main-nav ul {
+        padding-left: 80px;
+    }
+    .main-nav ul li {
+        margin-right: 1rem;
+    }
+}
+
+/* If the screen width is less than or equal 576px apply css defined in this block*/
+/*Ipad screen*/
+@media screen and (max-width: 1024px) {
+    .hover-underline-animation {
+        margin-right: 1.5rem;
+    }
+    .col-2 h3 {
+        width: 60% !important;
+    }
+    #icons ul {
+        padding-left: 0;
+    }
+
+    #icons input:focus {
+        width: 90px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .checkbtn {
+        display: block;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    h2.logo {
+        color: black !important;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+    .product-title {
+        position: initial;
+    }
+    .main-nav {
+        width: 20%;
+    }
+    #icons {
+        width: 52%;
+    }
+    #icons ul {
+        right: 20px;
+    }
+    #icons img {
+        width: 35px;
+        height: 35px;
+    }
+    #icons input:focus {
+        width: 130px;
+    }
+    nav {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 2;
+    }
+    .main-nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #f8f9fa;
+        top: 69px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        transition-delay: 0s;
+        padding-left: 0;
+        z-index: 2;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .hover-underline-animation {
+        display: block;
+        width: 100%;
+        margin: 50px 0;
+        line-height: 30px;
+        border-bottom: 2px solid #e7e7e7;
+    }
+
+    .main-nav .hover-underline-animation a {
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bolder;
+    }
+    .hover-underline-animation:after {
+        display: none;
+    }
+    .hover-underline-animation:hover:after {
+        display: none;
+    }
+    #check:checked ~ .main-nav ul {
+        left: 0;
+    }
+}
+
+
+/* If the screen width is less than or equal 768px apply css defined in this block*/
+/*Ipad screen*/
+@media screen and (max-width: 768px) {
+    h2.logo {
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .col-1 h3,
+    .col-2 h3,
+    .col-3 h3,
+    .col-4 h3 {
+        font-size: 1.2rem;
+    }
+    .col-2 h3 {
+        width: 70% !important;
+    }
+    .col-4 p {
+        font-size: 1.1rem;
+    }
+    .social-links a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .hover-underline-animation {
+        line-height: 30px;
+    }
+    .main-nav .hover-underline-animation a {
+        font-size: 1.3rem;
+    }
+
+    .footer_section_1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .col-1, .col-2, .col-3 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .col-4 {
+        text-align: center;
+        margin-top: 3rem;
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+    .col-1 ul li,
+    .col-2 ul li,
+    .col-3 ul li,
+    .col-4 ul li {
+        margin-left: 0;
+    }
+    .col-1 ul li,
+    .col-2 ul li,
+    .col-3 ul li,
+    .col-4 ul li {
+        margin-left: 0;
+    }
+    .col-1 h3,
+    .col-2 h3,
+    .col-3 h3,
+    .col-4 h3 {
+        margin: 0 auto;
+    }
+    .col-1 h3:after,
+    .col-2 h3:after,
+    .col-3 h3:after {
+        margin: 0 auto;
+        width: 50%;
+    }
+    .col-4 p {
+        margin: 0 auto;
+        margin-top: 0.5rem;
+    }
+    .newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .newsletter .email {
+        margin-left: 0;
+        width: 40%;
+    }
+    .footer_section_2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .copy-right {
+        width: 100%;
+    }
+    .payment-icon {
+        width: 100%;
+    }
+    .payment-icon div {
+        margin: 0 auto;
+    }
+    .copy-right p {
+        margin: 0 auto;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+}
+/* If the screen width is less than or equal 576px apply css defined in this block*/
+/*Mobile screen*/
+@media screen and (max-width: 576px) {
+    .checkbtn {
+        font-size: 1.8rem;
+        margin-top: 0.3rem;
+    }
+    h2.logo {
+        color: black !important;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 1.4rem;
+        margin-left: 0;
+    }
+    #icons input:focus {
+        width: 80px;
+    }
+    #icons ul {
+        right: 20px;
+        margin-top: 1rem;
+    }
+    #icons img {
+        width: 28px;
+        height: 28px;
+    }
+    .counter {
+        width: 16px;
+        height: 16px;
+        padding: 0.3rem;
+        margin-right: 6px;
+    }
+    .select-options {
+        display: block;
+    }
+    .hover-underline-animation {
+        line-height: 30px;
+        margin: 10px 0;
+    }
+    .main-nav .hover-underline-animation a {
+        font-size: 1rem;
+    }
+    .footer_section_1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .col-1, .col-2, .col-3, .col-4 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .col-4 {
+        text-align: center;
+        margin-top: 1rem;
+        grid-column: initial;
+        grid-row: initial;
+    }
+    .col-1 ul li,
+    .col-2 ul li,
+    .col-3 ul li,
+    .col-4 ul li {
+        margin-left: 0;
+    }
+    .col-1 h3,
+    .col-2 h3,
+    .col-3 h3,
+    .col-4 h3 {
+        margin: 0 auto;
+    }
+    .col-1 h3:after,
+    .col-2 h3:after,
+    .col-3 h3:after {
+        margin: 0 auto;
+        width: 50%;
+    }
+    .col-4 p {
+        margin: 0 auto;
+        margin-top: 0.5rem;
+    }
+    .footer_section_2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .copy-right p {
+        width: 80%;
+    }
+    .newsletter .email {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 376px) {
+    #icons ul {
+        right: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
